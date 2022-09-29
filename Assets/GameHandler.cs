@@ -97,4 +97,154 @@ public class GameHandler : MonoBehaviour
             Debug.Log("Missed");
         }
     }
+    public void P1HighPunch(){
+
+        damageChance = Random.Range(0, 101);
+        if (damageChance <= 55){
+            P2HP -= 8.0f;
+
+            Debug.Log("Player 2 HP: " + P2HP);
+            P2HPBar.fillAmount -= 8.0f / P2HP;
+        }else if (P2HP < 0){
+            P2HP = 0;
+            
+            Debug.Log("Player 2 is Dead");
+        }else {
+            Debug.Log("Missed");
+        }
+
+    }
+    public void P1LowKick(){
+
+        damageChance = Random.Range(0, 101);
+        if (damageChance <= 65){
+            P2HP -= 6.0f;
+
+            Debug.Log("Player 2 HP: " + P2HP);
+            P2HPBar.fillAmount -= 6.0f / P2HP;
+        }else if (P2HP < 0){
+            P2HP = 0;
+            
+            Debug.Log("Player 2 is Dead");
+        
+            
+        }else {
+            Debug.Log("Missed");
+        }
+
+    }
+    public void P1HighKick(){
+
+        damageChance = Random.Range(0, 101);
+        if (damageChance <= 45){
+            P2HP -= 12.0f;
+
+            Debug.Log("Player 2 HP: " + P2HP);
+            P2HPBar.fillAmount -= 12.0f / P2HP;
+        }else if (P2HP < 0){
+            P2HP = 0;
+            
+            Debug.Log("Player 2 is Dead");
+
+            
+        }else {
+            Debug.Log("Missed");
+        }
+
+    }
+    public void P1Special(){
+
+        P2HP -= 25.0f;
+
+        Debug.Log("Player 2 HP: " + P2HP);
+        P2HPBar.fillAmount -= 25.0f / P2HP;
+
+        if (P2HP == 0){
+            Debug.Log("Player P2 is dead");
+        }
+
+    }
+
+
+    public void P2LowPunch(){
+
+        damageChance = Random.Range(0, 101);
+        if (damageChance <= 75){
+            P1HP -= 3.0f;
+
+            Debug.Log("Player 1 HP: " + P1HP);
+            P1HPBar.fillAmount -= 3.0f / P1HP;
+        }else if (P1HP < 0){
+            P1HP = 0;
+            
+            Debug.Log("Player 1 is Dead");
+        }else {
+            Debug.Log("Missed");
+        }
+
+    }
+    public void P2HighPunch(){
+
+        damageChance = Random.Range(0, 101);
+        if (damageChance <= 55){
+            P1HP -= 8.0f;
+
+            Debug.Log("Player 1 HP: " + P1HP);
+            P1HPBar.fillAmount -= 8.0f / P1HP;
+        }else if (P1HP < 0){
+            P1HP = 0;
+            
+            Debug.Log("Player 1 is Dead");
+        }else {
+            Debug.Log("Missed");
+        }
+
+    }
+    public void P2LowKick(){
+
+        damageChance = Random.Range(0, 101);
+        if (damageChance <= 65){
+            P1HP -= 6.0f;
+
+            Debug.Log("Player 1 HP: " + P1HP);
+            P1HPBar.fillAmount -= 6.0f / P1HP;
+        }else if (P1HP < 0){
+            P1HP = 0;
+            
+            Debug.Log("Player 1 is Dead");
+        }else {
+            Debug.Log("Missed");
+        }
+
+    }
+    public void P2HighKick(){
+
+        damageChance = Random.Range(0, 101);
+        if (damageChance <= 45){
+            P1HP -= 12.0f;
+
+            Debug.Log("Player 1 HP: " + P1HP);
+            P1HPBar.fillAmount -= 12.0f / P1HP;
+        }else if (P1HP < 0){
+            P1HP = 0;
+            
+            Debug.Log("Player 1 is Dead");
+        }else {
+            Debug.Log("Missed");
+        }
+
+    }
+    
+    public void P2Special(){
+
+        P1HP -= 25.0f;
+
+        Debug.Log("Player 1 HP: " + P1HP);
+        P1HPBar.fillAmount -= 25.0f / P1HP;
+        if (P1HP == 0){
+            Debug.Log("Player P1 is dead");
+        }
+
+    }
+
 }
