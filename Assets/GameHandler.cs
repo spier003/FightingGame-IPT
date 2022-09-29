@@ -36,6 +36,13 @@ public class GameHandler : MonoBehaviour
     public void PlayGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public void BackToMainMenu(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+    //To restart
+    public void RestartGame() {
+             SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
+         }
     // to quit
     public void QuitGame(){
         Debug.Log("Quit");
