@@ -1,13 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameHandler : MonoBehaviour
 {
     //PLAYERS HP
     public float P1HP;
     public float P2HP;
+
+    public Image P1HPBar;
+
+    public Image P2HPBar;
+
+    // Players Accuracy
+    public int damageChance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,5 +61,22 @@ public class GameHandler : MonoBehaviour
 
         Debug.Log("Player 1 HP: " + P1HP);
         Debug.Log("Player 2 HP: " + P2HP);
+    }
+
+    //Players Attack
+    public void P1LowPunch(){
+
+        damageChance = Random.Range(0, 101);
+        if (damageChance <= 75){
+            P2HP -= 3.0f;
+            Debug.Log("Player 2 HP : " + P2HP);
+            P2HPBar.fillAmount -= 3.0f / P2HP;
+        }else if (P2HP < 0){
+            P2HP = 0;
+            
+            Debug.Log("Player 2 is Dead");
+        }else {
+            Debug.Log("Missed");
+        }
     }
 }
