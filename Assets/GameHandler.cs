@@ -22,13 +22,13 @@ public class GameHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
@@ -41,33 +41,44 @@ public class GameHandler : MonoBehaviour
     }
     //To restart
     public void RestartGame() {
-             SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
          }
     // to quit
     public void QuitGame(){
         Debug.Log("Quit");
         Application.Quit();
     }
+    
     // Set HP
+
+    public void RestartHP(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
+    }
     public void SetHP50(){
+        
         P1HP = 50.0f;
         P2HP = 50.0f;
         Debug.Log("Player 1 HP: " + P1HP);
         Debug.Log("Player 2 HP: " + P2HP);
+        
     }
     public void SetHP100(){
+        
         P1HP = 100.0f;
         P2HP = 100.0f;
 
         Debug.Log("Player 1 HP: " + P1HP);
         Debug.Log("Player 2 HP: " + P2HP);
+        
     }
     public void SetHP150(){
+        
         P1HP = 150.0f;
         P2HP = 150.0f;
 
         Debug.Log("Player 1 HP: " + P1HP);
         Debug.Log("Player 2 HP: " + P2HP);
+        
     }
 
     //Players Attack
