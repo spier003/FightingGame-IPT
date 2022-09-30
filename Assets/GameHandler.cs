@@ -11,27 +11,33 @@ public class GameHandler : MonoBehaviour
     //PLAYERS HP
     public float P1HP;
     public float P2HP;
-
     public Image P1HPBar;
 
     public Image P2HPBar;
 
-
-
+    //Player Name
+    public TextMeshProUGUI P1Name;
+    public TextMeshProUGUI P2Name;
+    public TMP_InputField inputField1;
+    public TMP_InputField inputField2;
+  
+     
+ 
     // Players Accuracy
     public int damageChance;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+      
     }
+   
 
 
     //For Main Menu
@@ -82,6 +88,15 @@ public class GameHandler : MonoBehaviour
         Debug.Log("Player 1 HP: " + P1HP);
         Debug.Log("Player 2 HP: " + P2HP);
         
+    }
+
+    //Set Player Name
+    public void SetPlayerName(){
+        P1Name.text = inputField1.text;
+        P2Name.text = inputField2.text;
+
+        Debug.Log(P1Name);
+        Debug.Log(P2Name);
     }
 
     //Players Attack
