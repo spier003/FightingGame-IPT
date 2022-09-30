@@ -16,6 +16,9 @@ public class GameHandler : MonoBehaviour
 
     public Image P2HPBar;
 
+    public int p1hpp;
+    public int p2hpp;
+
     // Players Accuracy
     public int damageChance;
 
@@ -70,6 +73,9 @@ public class GameHandler : MonoBehaviour
         Debug.Log("Player 1 HP: " + P1HP);
         Debug.Log("Player 2 HP: " + P2HP);
         
+        p2hpp = 100;
+        p1hpp = 100;
+
     }
     public void SetHP150(){
         
@@ -88,11 +94,12 @@ public class GameHandler : MonoBehaviour
         if (damageChance <= 75){
             P2HP -= 3.0f;
             Debug.Log("Player 2 HP : " + P2HP);
-            P2HPBar.fillAmount -= 3.0f / P2HP;
+            P2HPBar.fillAmount -= .30f / P2HP;
         }else if (P2HP < 0){
             P2HP = 0;
             
             Debug.Log("Player 2 is Dead");
+            P2HPBar.fillAmount -= 0;
         }else {
             Debug.Log("Missed");
         }
