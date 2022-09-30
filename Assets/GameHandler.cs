@@ -16,8 +16,7 @@ public class GameHandler : MonoBehaviour
 
     public Image P2HPBar;
 
-    public int p1hpp;
-    public int p2hpp;
+
 
     // Players Accuracy
     public int damageChance;
@@ -72,9 +71,7 @@ public class GameHandler : MonoBehaviour
 
         Debug.Log("Player 1 HP: " + P1HP);
         Debug.Log("Player 2 HP: " + P2HP);
-        
-        p2hpp = 100;
-        p1hpp = 100;
+
 
     }
     public void SetHP150(){
