@@ -21,7 +21,9 @@ public class GameHandler : MonoBehaviour
     public TMP_InputField inputField1;
     public TMP_InputField inputField2;
   
-     
+     public VideoPlayer VideoPlayer;
+     public string SceneName;
+     public GameObject Game;
  
     // Players Accuracy
     public int damageChance;
@@ -97,6 +99,12 @@ public class GameHandler : MonoBehaviour
 
         Debug.Log(P1Name);
         Debug.Log(P2Name);
+    }
+
+    //Move to scene
+    public void MoveToScene(int sceneID)
+    {
+        SceneManager.LoadScene(sceneID);
     }
 
     //Players Attack
