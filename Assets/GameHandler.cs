@@ -118,7 +118,7 @@ public class GameHandler : MonoBehaviour
             Debug.Log("Player 2 HP : " + P2HP);
             P2HPBar.fillAmount -= .30f / P2HP;
 
-        }else if (P2HP < 0){
+        }else if (P2HP <= 0){
             P2HP = 0;
             
             Debug.Log("Player 2 is Dead");
@@ -136,7 +136,7 @@ public class GameHandler : MonoBehaviour
 
             Debug.Log("Player 2 HP: " + P2HP);
             P2HPBar.fillAmount -= 8.0f / P2HP;
-        }else if (P2HP < 0){
+        }else if (P2HP <= 0){
             P2HP = 0;
             
             Debug.Log("Player 2 is Dead");
@@ -153,7 +153,7 @@ public class GameHandler : MonoBehaviour
 
             Debug.Log("Player 2 HP: " + P2HP);
             P2HPBar.fillAmount -= 6.0f / P2HP;
-        }else if (P2HP < 0){
+        }else if (P2HP <= 0){
             P2HP = 0;
             
             Debug.Log("Player 2 is Dead");
@@ -172,7 +172,7 @@ public class GameHandler : MonoBehaviour
 
             Debug.Log("Player 2 HP: " + P2HP);
             P2HPBar.fillAmount -= 12.0f / P2HP;
-        }else if (P2HP < 0){
+        }else if (P2HP <= 0){
             P2HP = 0;
             
             Debug.Log("Player 2 is Dead");
@@ -205,7 +205,7 @@ public class GameHandler : MonoBehaviour
 
             Debug.Log("Player 1 HP: " + P1HP);
             P1HPBar.fillAmount -= 3.0f / P1HP;
-        }else if (P1HP < 0){
+        }else if (P1HP <= 0){
             P1HP = 0;
             
             Debug.Log("Player 1 is Dead");
@@ -222,7 +222,7 @@ public class GameHandler : MonoBehaviour
 
             Debug.Log("Player 1 HP: " + P1HP);
             P1HPBar.fillAmount -= 8.0f / P1HP;
-        }else if (P1HP < 0){
+        }else if (P1HP <= 0){
             P1HP = 0;
             
             Debug.Log("Player 1 is Dead");
@@ -239,7 +239,7 @@ public class GameHandler : MonoBehaviour
 
             Debug.Log("Player 1 HP: " + P1HP);
             P1HPBar.fillAmount -= 6.0f / P1HP;
-        }else if (P1HP < 0){
+        }else if (P1HP <= 0){
             P1HP = 0;
             
             Debug.Log("Player 1 is Dead");
@@ -256,7 +256,7 @@ public class GameHandler : MonoBehaviour
 
             Debug.Log("Player 1 HP: " + P1HP);
             P1HPBar.fillAmount -= 12.0f / P1HP;
-        }else if (P1HP < 0){
+        }else if (P1HP <= 0){
             P1HP = 0;
             
             Debug.Log("Player 1 is Dead");
@@ -272,7 +272,7 @@ public class GameHandler : MonoBehaviour
 
         Debug.Log("Player 1 HP: " + P1HP);
         P1HPBar.fillAmount -= 25.0f / P1HP;
-        if (P1HP == 0){
+        if (P1HP <= 0){
             Debug.Log("Player P1 is dead");
         }
 
