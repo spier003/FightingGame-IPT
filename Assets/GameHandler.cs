@@ -21,23 +21,25 @@ public class GameHandler : MonoBehaviour
     public TMP_InputField inputField1;
     public TMP_InputField inputField2;
   
-    //  public VideoPlayer VideoPlayer;
-    //  public string SceneName;
-    //  public GameObject Game;
  
     // Players Accuracy
     public int damageChance;
 
+    public TextMeshProUGUI HPText1;
+    public TextMeshProUGUI HPText2;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-      
+      HPText1.text = "Health : " + P1HP;
+      HPText2.text = "Health : " + P2HP;
     }
    
 
@@ -115,11 +117,13 @@ public class GameHandler : MonoBehaviour
             P2HP -= 3.0f;
             Debug.Log("Player 2 HP : " + P2HP);
             P2HPBar.fillAmount -= .30f / P2HP;
+
         }else if (P2HP < 0){
             P2HP = 0;
             
             Debug.Log("Player 2 is Dead");
             P2HPBar.fillAmount -= 0;
+            
         }else {
             Debug.Log("Missed");
         }
@@ -186,7 +190,7 @@ public class GameHandler : MonoBehaviour
         Debug.Log("Player 2 HP: " + P2HP);
         P2HPBar.fillAmount -= 25.0f / P2HP;
 
-        if (P2HP == 0){
+        if (P2HP <= 0){
             Debug.Log("Player P2 is dead");
         }
 
