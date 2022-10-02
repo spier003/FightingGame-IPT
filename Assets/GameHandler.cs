@@ -143,7 +143,7 @@ public class GameHandler : MonoBehaviour
             P2HP -= 3.0f;
             Debug.Log("Player 2 HP : " + P2HP);
             P2HPBar.fillAmount -= .30f / P2HP;
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
 
         }else if (P2HP <= 0){
             P2HP = 0;
@@ -153,7 +153,7 @@ public class GameHandler : MonoBehaviour
             
         }else {
             Debug.Log("Missed");
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }  
     }
     public void P1HighPunch(){

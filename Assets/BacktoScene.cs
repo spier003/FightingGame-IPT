@@ -8,7 +8,7 @@ public class BacktoScene : MonoBehaviour
 {
     public void MoveToScene(int sceneID)
     {
-        SceneManager.LoadScene(sceneID);
+        SceneManager.LoadScene(2);
     }
 
 
