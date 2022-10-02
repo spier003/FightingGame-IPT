@@ -22,13 +22,18 @@ public class GameHandler : MonoBehaviour
     public TMP_InputField inputField2;
   
  
+    //VIDEOS
+    public GameObject VideoPlayer;
+    public VideoClip P1LowKickAttack;
+    public VideoClip P1LowKickMissed;
+
     // Players Accuracy
     public int damageChance;
 
     public TextMeshProUGUI HPText1;
     public TextMeshProUGUI HPText2;
 
-    static GameHandler TheOne;
+    // static GameHandler TheOne;
 
     // Start is called before the first frame update
     void Start()
@@ -37,12 +42,14 @@ public class GameHandler : MonoBehaviour
         P2HP = 50f;
 
     
-              if(TheOne != null){
-            Destroy(this.gameObject);
-            return;
-        }
-        TheOne = this;
-        GameObject.DontDestroyOnLoad(this.gameObject);
+        //       if(TheOne != null){
+        //     Destroy(this.gameObject);
+        //     return;
+        // }
+        // TheOne = this;
+        // GameObject.DontDestroyOnLoad(this.gameObject);
+
+
 
     }
 
@@ -174,17 +181,23 @@ public class GameHandler : MonoBehaviour
 
             Debug.Log("Player 2 HP: " + P2HP);
             P2HPBar.fillAmount -= 6.0f / P2HP;
+            VideoPlayer.gameObject.GetComponent<VideoPlayer>().clip = P1LowKickAttack;
+            VideoPlayer.gameObject.GetComponent<VideoPlayer>().Play();
+            Destroy(gameObject, 3);
         }else if (P2HP <= 0){
             P2HP = 0;
             
             Debug.Log("Player 2 is Dead");
-        
-            
+            VideoPlayer.gameObject.GetComponent<VideoPlayer>().clip = P1LowKickMissed;
+            VideoPlayer.gameObject.GetComponent<VideoPlayer>().Play();
+            Destroy(gameObject, 3);
         }else {
             Debug.Log("Missed");
         }
 
     }
+
+
     public void P1HighKick(){
 
         damageChance = Random.Range(0, 101);
