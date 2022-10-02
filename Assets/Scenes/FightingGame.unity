@@ -7486,11 +7486,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775812677}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: eaa3b855aa648714392404710803e3a7, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: c9c9a04791d01bd4abf1e315b98c039d, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: a0221c1f5c2d14741b659e39e6ce019b, type: 2}
+  m_TargetTexture: {fileID: 8600000, guid: 2c45a31bcb0bf8244b713917a8533934, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
@@ -7505,7 +7505,7 @@ VideoPlayer:
   - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
+  m_DirectAudioMutes: 01
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
@@ -8189,7 +8189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1868968907
 Transform:
   m_ObjectHideFlags: 0
@@ -9178,7 +9178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2109545507
 Transform:
   m_ObjectHideFlags: 0
@@ -9270,7 +9270,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: a0221c1f5c2d14741b659e39e6ce019b, type: 2}
+  m_Texture: {fileID: 8600000, guid: 2c45a31bcb0bf8244b713917a8533934, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
