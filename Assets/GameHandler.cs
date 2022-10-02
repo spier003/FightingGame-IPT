@@ -9,8 +9,8 @@ using TMPro;
 public class GameHandler : MonoBehaviour
 {
     //PLAYERS HP
-    public float P1HP;
-    public float P2HP;
+    public static float P1HP;
+    public static float P2HP;
     public Image P1HPBar;
 
     public Image P2HPBar;
@@ -36,7 +36,8 @@ public class GameHandler : MonoBehaviour
         P1HP = 50f;
         P2HP = 50f;
 
-        if(TheOne != null){
+    
+              if(TheOne != null){
             Destroy(this.gameObject);
             return;
         }
@@ -50,22 +51,28 @@ public class GameHandler : MonoBehaviour
     {
       HPText1.text = "Health : " + P1HP;
       HPText2.text = "Health : " + P2HP;
+
     }
    
-    public void testinggame(){
-        SceneManager.LoadScene(22);
-    }
+    // public void testinggame(){
+    //     SceneManager.LoadScene(22);
+    // }
 
     //For Main Menu
     public void PlayGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public void NextGame(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
     public void BackToMainMenu(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(0);
     }
     //To restart
     public void RestartGame() {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
+            SceneManager.LoadScene(1);
          }
     // to quit
     public void QuitGame(){

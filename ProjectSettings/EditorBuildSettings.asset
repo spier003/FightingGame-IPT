@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FightingGame.unity
     guid: e5d5e3e3a44127a49b31cef57d8df66f
   - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: a94968ec6d0b7fb4384b838fe0c8ea51
+  - enabled: 1
     path: Assets/Scenes/P1/P1LowPunch.unity
     guid: 87991d473f6f79b48ba403db62afc835
   - enabled: 1
@@ -71,7 +74,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/P2/P2Special.unity
     guid: 10e4cd4cf7cea0c4d962d8c7191412f5
-  - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: a94968ec6d0b7fb4384b838fe0c8ea51
   m_configObjects: {}
