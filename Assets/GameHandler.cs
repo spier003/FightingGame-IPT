@@ -28,12 +28,21 @@ public class GameHandler : MonoBehaviour
     public TextMeshProUGUI HPText1;
     public TextMeshProUGUI HPText2;
 
+    static GameHandler TheOne;
 
     // Start is called before the first frame update
     void Start()
     {
         P1HP = 50f;
         P2HP = 50f;
+
+        if(TheOne != null){
+            Destroy(this.gameObject);
+            return;
+        }
+        TheOne = this;
+        GameObject.DontDestroyOnLoad(this.gameObject);
+
     }
 
     // Update is called once per frame
@@ -43,7 +52,9 @@ public class GameHandler : MonoBehaviour
       HPText2.text = "Health : " + P2HP;
     }
    
-
+    public void testinggame(){
+        SceneManager.LoadScene(22);
+    }
 
     //For Main Menu
     public void PlayGame(){
@@ -100,8 +111,8 @@ public class GameHandler : MonoBehaviour
         P1Name.text = inputField1.text;
         P2Name.text = inputField2.text;
 
-        Debug.Log(P1Name);
-        Debug.Log(P2Name);
+        Debug.Log(inputField1);
+        Debug.Log(inputField2);
     }
 
     //Move to scene
@@ -118,6 +129,7 @@ public class GameHandler : MonoBehaviour
             P2HP -= 3.0f;
             Debug.Log("Player 2 HP : " + P2HP);
             P2HPBar.fillAmount -= .30f / P2HP;
+            SceneManager.LoadScene(2);
 
         }else if (P2HP <= 0){
             P2HP = 0;
@@ -127,7 +139,8 @@ public class GameHandler : MonoBehaviour
             
         }else {
             Debug.Log("Missed");
-        }
+            SceneManager.LoadScene(3);
+        }  
     }
     public void P1HighPunch(){
 
