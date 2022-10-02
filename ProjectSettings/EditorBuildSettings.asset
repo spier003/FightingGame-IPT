@@ -39,6 +39,12 @@ EditorBuildSettings:
     path: Assets/Scenes/P1/P1Special.unity
     guid: 392c4d3b515b95646a89da474af99bff
   - enabled: 1
+    path: Assets/Scenes/P1/P1SpecialMissed.unity
+    guid: be8c8e38dc33959479014551c214d4e8
+  - enabled: 1
+    path: Assets/Scenes/P1/P1Winner.unity
+    guid: 1d47ea93c64791f419aa1b4074d5f871
+  - enabled: 1
     path: Assets/Scenes/P2/P2LowPunch.unity
     guid: 02f6c70f2e268ee4ca1491b67511874f
   - enabled: 1
