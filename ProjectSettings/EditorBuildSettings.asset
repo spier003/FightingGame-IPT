@@ -12,57 +12,57 @@ EditorBuildSettings:
     path: Assets/Scenes/FightingGame.unity
     guid: e5d5e3e3a44127a49b31cef57d8df66f
   - enabled: 1
-    path: Assets/Scenes/P1LowPunch.unity
+    path: Assets/Scenes/P1/P1LowPunch.unity
     guid: 87991d473f6f79b48ba403db62afc835
   - enabled: 1
-    path: Assets/Scenes/P1LowPunchMissed.unity
+    path: Assets/Scenes/P1/P1LowPunchMissed.unity
     guid: 4c693699b7783f040a479628d8bfd7da
   - enabled: 1
-    path: Assets/Scenes/P1HighPunch.unity
+    path: Assets/Scenes/P1/P1HighPunch.unity
     guid: 9b37e5ed9772f5e48b2f0e8f07a228ff
   - enabled: 1
-    path: Assets/Scenes/P1HighPunchMissed.unity
+    path: Assets/Scenes/P1/P1HighPunchMissed.unity
     guid: 84ad8df2242706f45bbc7ed6175abf74
   - enabled: 1
-    path: Assets/Scenes/P1LowKick.unity
+    path: Assets/Scenes/P1/P1LowKick.unity
     guid: c7b6fa85f712fba4d80a4a840a7a045a
   - enabled: 1
-    path: Assets/Scenes/P1LowKickMissed.unity
+    path: Assets/Scenes/P1/P1LowKickMissed.unity
     guid: 7b64f6011899d7c43aa3a25a856f1f13
   - enabled: 1
-    path: Assets/Scenes/P1HighKick.unity
+    path: Assets/Scenes/P1/P1HighKick.unity
     guid: 91cfd97f7409c8e41a1e6d4ad2966c0f
   - enabled: 1
-    path: Assets/Scenes/P1HighKickMissed.unity
+    path: Assets/Scenes/P1/P1HighKickMissed.unity
     guid: c1f7a470574bab045baec991a2464187
   - enabled: 1
-    path: Assets/Scenes/P1Special.unity
+    path: Assets/Scenes/P1/P1Special.unity
     guid: 392c4d3b515b95646a89da474af99bff
   - enabled: 1
-    path: Assets/Scenes/P2LowPunch.unity
+    path: Assets/Scenes/P2/P2LowPunch.unity
     guid: 02f6c70f2e268ee4ca1491b67511874f
   - enabled: 1
-    path: Assets/Scenes/P2LowPunchMissed.unity
+    path: Assets/Scenes/P2/P2LowPunchMissed.unity
     guid: a63e8f059458ad942b7fead181696151
   - enabled: 1
-    path: Assets/Scenes/P2HighPunch.unity
+    path: Assets/Scenes/P2/P2HighPunch.unity
     guid: bde308dd3277ac9478cc30cd74fd2b08
   - enabled: 1
-    path: Assets/Scenes/P2HighPunchMissed.unity
+    path: Assets/Scenes/P2/P2HighPunchMissed.unity
     guid: 33348e08c050ee84696c6d166244d430
   - enabled: 1
-    path: Assets/Scenes/P2LowKick.unity
+    path: Assets/Scenes/P2/P2LowKick.unity
     guid: 5533611275b857946889b20d4ababe9a
   - enabled: 1
-    path: Assets/Scenes/P2LowKickMissed.unity
+    path: Assets/Scenes/P2/P2LowKickMissed.unity
     guid: 4d5e3dd0e8f9414478cb6fa94c4d1233
   - enabled: 1
-    path: Assets/Scenes/P2HighKick.unity
+    path: Assets/Scenes/P2/P2HighKick.unity
     guid: 1a5666300134c1e45aa180990b7d0994
   - enabled: 1
-    path: Assets/Scenes/P2HighKickMissed.unity
+    path: Assets/Scenes/P2/P2HighKickMissed.unity
     guid: 015a98d5b54cf144493e0b11d22e3db8
   - enabled: 1
-    path: Assets/Scenes/P2Special.unity
+    path: Assets/Scenes/P2/P2Special.unity
     guid: 10e4cd4cf7cea0c4d962d8c7191412f5
   m_configObjects: {}
