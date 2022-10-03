@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class timerforan : MonoBehaviour
+
+public class Timer : MonoBehaviour
 {
     float currentTime = 0f;
     float startingTime = 2f;
@@ -18,9 +17,8 @@ public class timerforan : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
         Debug.Log(currentTime);
         if(currentTime <= 0){
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
 
         }
     }
 }
-

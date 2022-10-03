@@ -4,11 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameNav : MonoBehaviour
 {
-   public void Menu(){
+   public void SetName(){
         SceneManager.LoadScene(1);
     }
-    public void PlayGame(){
+    public void SetHP(){
         SceneManager.LoadScene(2);
+    }
+
+    public void StartGame(){
+        SceneManager.LoadScene(3);
     }
     public void BackToMainMenu(){
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
@@ -25,8 +29,8 @@ public class GameNav : MonoBehaviour
         Application.Quit();
     }
 
-     public void ResetPlayerName(){
+     public void ResetData(){
         PlayerPrefs.DeleteAll();
-        Debug.Log("Names are Deleted");
+        Debug.Log("Data are Deleted");
     }
 }
