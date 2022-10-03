@@ -14,8 +14,8 @@ public class LoadName : MonoBehaviour
     public TextMeshProUGUI HPText1;
     public TextMeshProUGUI HPText2;
 
-    public static float P1HP;
-    public static float P2HP;
+    public static int P1HP;
+    public static int P2HP;
 
     public Image P1HPBar;
 
@@ -28,8 +28,10 @@ public class LoadName : MonoBehaviour
          Player1Name.text = PlayerPrefs.GetString("P1Name");
          Player2Name.text = PlayerPrefs.GetString("P2Name");
         
-        P1HP = 50f;
-        P2HP = 50f;
+        P1HP = 50;
+        P2HP = 50;
+
+        
     }
 
     public void ResetPlayerName(){
@@ -51,37 +53,39 @@ public class LoadName : MonoBehaviour
          }
     public void SetHP50(){
         
-        P1HP = 50.0f;
-        P2HP = 50.0f;
+        P1HP = 50;
+        P2HP = 50;
         Debug.Log("Player 1 HP: " + P1HP);
         Debug.Log("Player 2 HP: " + P2HP);
         
+        DontDestroyOnLoad(gameObject);
     }
     public void SetHP100(){
         
-        P1HP = 100.0f;
-        P2HP = 100.0f;
+        P1HP = 100;
+        P2HP = 100;
 
         Debug.Log("Player 1 HP: " + P1HP);
         Debug.Log("Player 2 HP: " + P2HP);
 
-
+        DontDestroyOnLoad(gameObject);
     }
     public void SetHP150(){
         
-        P1HP = 150.0f;
-        P2HP = 150.0f;
+        P1HP = 150;
+        P2HP = 150;
 
         Debug.Log("Player 1 HP: " + P1HP);
         Debug.Log("Player 2 HP: " + P2HP);
         
+        DontDestroyOnLoad(gameObject);
     }
         //Players Attack
     public void P1LowPunch(){
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 75){
-            P2HP -= 3.0f;
+            P2HP -= 3;
             Debug.Log("Player 2 HP : " + P2HP);
             P2HPBar.fillAmount -= .30f / P2HP;
             SceneManager.LoadScene(3);
@@ -101,7 +105,7 @@ public class LoadName : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 55){
-            P2HP -= 8.0f;
+            P2HP -= 8;
 
             Debug.Log("Player 2 HP: " + P2HP);
             P2HPBar.fillAmount -= 8.0f / P2HP;
@@ -118,7 +122,7 @@ public class LoadName : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 65){
-            P2HP -= 6.0f;
+            P2HP -= 6;
 
             Debug.Log("Player 2 HP: " + P2HP);
             P2HPBar.fillAmount -= 6.0f / P2HP;
@@ -139,7 +143,7 @@ public class LoadName : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 45){
-            P2HP -= 12.0f;
+            P2HP -= 12;
 
             Debug.Log("Player 2 HP: " + P2HP);
             P2HPBar.fillAmount -= 12.0f / P2HP;
@@ -157,8 +161,7 @@ public class LoadName : MonoBehaviour
      public void P1Special(){
         damageChance = Random.Range(0, 101);
         if (damageChance <= 90){
-            P2HP -= 25.0f;
-        P2HP -= 25.0f;
+            P2HP -= 25;
 
             Debug.Log("Player 2 HP: " + P2HP);
         }else if (P2HP <= 0){
@@ -179,7 +182,7 @@ public class LoadName : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 75){
-            P1HP -= 3.0f;
+            P1HP -= 3;
 
             Debug.Log("Player 1 HP: " + P1HP);
             P1HPBar.fillAmount -= 3.0f / P1HP;
@@ -196,7 +199,7 @@ public class LoadName : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 55){
-            P1HP -= 8.0f;
+            P1HP -= 8;
 
             Debug.Log("Player 1 HP: " + P1HP);
             P1HPBar.fillAmount -= 8.0f / P1HP;
@@ -213,7 +216,7 @@ public class LoadName : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 65){
-            P1HP -= 6.0f;
+            P1HP -= 6;
 
             Debug.Log("Player 1 HP: " + P1HP);
             P1HPBar.fillAmount -= 6.0f / P1HP;
@@ -230,7 +233,7 @@ public class LoadName : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 45){
-            P1HP -= 12.0f;
+            P1HP -= 12;
 
             Debug.Log("Player 1 HP: " + P1HP);
             P1HPBar.fillAmount -= 12.0f / P1HP;
@@ -247,14 +250,13 @@ public class LoadName : MonoBehaviour
      public void P2Special(){
         damageChance = Random.Range(0, 101);
         if (damageChance <= 90){
-            P1HP -= 25.0f;
+            P1HP -= 25;
 
             Debug.Log("Player 1 HP: " + P1HP);
         }else if (P1HP <= 0){
             P1HP = 0;
             
             Debug.Log("Player 2 is Dead");
-        P1HP -= 25.0f;
         }
         else {
             Debug.Log("Missed");
