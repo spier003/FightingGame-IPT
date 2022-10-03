@@ -40,6 +40,17 @@ public class GameHandler : MonoBehaviour
     {
         P1HP = 50f;
         P2HP = 50f;
+
+    
+        //       if(TheOne != null){
+        //     Destroy(this.gameObject);
+        //     return;
+        // }
+        // TheOne = this;
+        // GameObject.DontDestroyOnLoad(this.gameObject);
+
+
+
     }
 
     // Update is called once per frame
@@ -49,12 +60,15 @@ public class GameHandler : MonoBehaviour
       HPText2.text = "Health : " + P2HP;
 
     }
+   
+    // public void testinggame(){
+    //     SceneManager.LoadScene(22);
+    // }
 
     //For Main Menu
     public void PlayGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    
     public void NextGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
@@ -66,7 +80,7 @@ public class GameHandler : MonoBehaviour
     public void RestartGame() {
             // SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
             SceneManager.LoadScene(1);
-    }
+         }
     // to quit
     public void QuitGame(){
         Debug.Log("Quit");
@@ -74,6 +88,7 @@ public class GameHandler : MonoBehaviour
     }
     
     // Set HP
+
     public void RestartHP(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
     }
@@ -104,6 +119,21 @@ public class GameHandler : MonoBehaviour
         Debug.Log("Player 2 HP: " + P2HP);
         
     }
+
+    //Set Player Name
+    //public void SetPlayerName(){
+       // P1Name.text = inputField1.text;
+      //  P2Name.text = inputField2.text;
+
+      //  Debug.Log(inputField1);
+      //  Debug.Log(inputField2);
+    //}
+
+    //Move to scene
+    // public void MoveToScene(int sceneID)
+    // {
+    //     SceneManager.LoadScene(sceneID);
+    // }
 
     //Players Attack
     public void P1LowPunch(){
