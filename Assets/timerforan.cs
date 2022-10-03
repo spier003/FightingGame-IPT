@@ -18,7 +18,7 @@ public class timerforan : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
         Debug.Log(currentTime);
         if(currentTime <= 0){
-            SceneManager.LoadScene(22);
+            SceneManager.LoadScene(2);
 
         }
     }

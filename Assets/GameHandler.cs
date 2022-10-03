@@ -121,13 +121,13 @@ public class GameHandler : MonoBehaviour
     }
 
     //Set Player Name
-    public void SetPlayerName(){
-        P1Name.text = inputField1.text;
-        P2Name.text = inputField2.text;
+    //public void SetPlayerName(){
+       // P1Name.text = inputField1.text;
+      //  P2Name.text = inputField2.text;
 
-        Debug.Log(inputField1);
-        Debug.Log(inputField2);
-    }
+      //  Debug.Log(inputField1);
+      //  Debug.Log(inputField2);
+    //}
 
     //Move to scene
     // public void MoveToScene(int sceneID)
