@@ -48,9 +48,6 @@ EditorBuildSettings:
     path: Assets/Scenes/P1/P1SpecialMissed.unity
     guid: be8c8e38dc33959479014551c214d4e8
   - enabled: 1
-    path: Assets/Scenes/P1/P1Winner.unity
-    guid: 1d47ea93c64791f419aa1b4074d5f871
-  - enabled: 1
     path: Assets/Scenes/P2/P2LowPunch.unity
     guid: 02f6c70f2e268ee4ca1491b67511874f
   - enabled: 1
@@ -77,4 +74,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/P2/P2Special.unity
     guid: 10e4cd4cf7cea0c4d962d8c7191412f5
+  - enabled: 1
+    path: Assets/Scenes/P2/P2SpecialMissed.unity
+    guid: cae7a944c5c972742a6cc4e0cdd57a35
+  - enabled: 1
+    path: Assets/Scenes/P1/P1Winner.unity
+    guid: 1d47ea93c64791f419aa1b4074d5f871
+  - enabled: 1
+    path: Assets/Scenes/P2/P2 Winner.unity
+    guid: 2c918504dfcccff48a04b40e3f2ede8b
   m_configObjects: {}

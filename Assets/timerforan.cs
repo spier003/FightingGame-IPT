@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class timerforan : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 3f;
+    float startingTime = 2f;
     // Start is called before the first frame update
     void Start()
     {

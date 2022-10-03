@@ -13,8 +13,26 @@ public class Game : MonoBehaviour
     Debug.Log("P1 name is" + PlayerPrefs.GetString("P1Name"));
     Debug.Log("P2 name is" + PlayerPrefs.GetString("P2Name"));
     }
-
-    public void NextGame(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    public void SetHP50(){
+        
+        PlayerPrefs.SetFloat("P1Health", 50);
+        PlayerPrefs.SetFloat("P2Health", 50);
+        Debug.Log("Player 1 HP: " + PlayerPrefs.GetFloat("P1Health"));
+        Debug.Log("Player 2 HP: " + PlayerPrefs.GetFloat("P2Health"));  
+    }
+    public void SetHP100(){
+        
+        PlayerPrefs.SetFloat("P1Health", 100);
+        PlayerPrefs.SetFloat("P2Health", 100);
+        Debug.Log("Player 1 HP: " + PlayerPrefs.GetFloat("P1Health"));
+        Debug.Log("Player 2 HP: " + PlayerPrefs.GetFloat("P2Health"));
+    }
+    public void SetHP150(){
+        
+        PlayerPrefs.SetFloat("P1Health", 150);
+        PlayerPrefs.SetFloat("P2Health", 150);
+        Debug.Log("Player 1 HP: " + PlayerPrefs.GetFloat("P1Health"));
+        Debug.Log("Player 2 HP: " + PlayerPrefs.GetFloat("P2Health"));
+        
     }
 }
