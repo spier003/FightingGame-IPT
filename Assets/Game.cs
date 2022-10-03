@@ -13,4 +13,8 @@ public class Game : MonoBehaviour
     Debug.Log("P1 name is" + PlayerPrefs.GetString("P1Name"));
     Debug.Log("P2 name is" + PlayerPrefs.GetString("P2Name"));
     }
+
+    public void NextGame(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
