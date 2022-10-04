@@ -11,32 +11,33 @@ public class GameHandler : MonoBehaviour
     public static float P1HP;
     public static float P2HP;
     //PLAYERS HP
-    public Image P1HPBar;
-    public Image P2HPBar;
+
     // Players Accuracy
     public int damageChance;
 
     public TextMeshProUGUI HPText1;
     public TextMeshProUGUI HPText2;
 
-
     // Start is called before the first frame update
     void Start()
     {
         P1HP = PlayerPrefs.GetFloat("P1Health");
-        P2HP = PlayerPrefs.GetFloat("P2Health");
+        P2HP = PlayerPrefs.GetFloat("P2Health"); 
     }
+
     // Update is called once per frame
     void Update()
     {
-      HPText1.text = "Health : " + P1HP;
-      HPText2.text = "Health : " + P2HP;
+      HPText1.text = P1HP.ToString();
+      HPText2.text = P2HP.ToString();
     }
    
    void OnDestroy() {
         PlayerPrefs.SetFloat("P1Health", P1HP);
         PlayerPrefs.SetFloat("P2Health", P2HP);
    }
+    
+   
 
     //Players Attack
     public void P1LowPunch(){
