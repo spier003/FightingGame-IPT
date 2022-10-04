@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class timerforan : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 2f;
+    float startingTime = 3f;
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +20,13 @@ public class timerforan : MonoBehaviour
         currentTime -= 1 * Time.deltaTime;
         Debug.Log(currentTime);
         if(currentTime <= 0){
-            SceneManager.LoadScene(3);
-
         }
+ 
     }
+
+    public void Back(){
+        SceneManager.LoadScene(2);
+    }
+
 }
 
