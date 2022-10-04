@@ -8,8 +8,8 @@ using TMPro;
 
 public class GameHandler : MonoBehaviour
 {
-    public static float P1HP;
-    public static float P2HP;
+    public static int P1HP;
+    public static int P2HP;
     //PLAYERS HP
 
     // Players Accuracy
@@ -21,8 +21,8 @@ public class GameHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        P1HP = PlayerPrefs.GetFloat("P1Health");
-        P2HP = PlayerPrefs.GetFloat("P2Health"); 
+        P1HP = PlayerPrefs.GetInt("P1Health");
+        P2HP = PlayerPrefs.GetInt("P2Health"); 
     }
 
     // Update is called once per frame
@@ -33,8 +33,8 @@ public class GameHandler : MonoBehaviour
     }
    
    void OnDestroy() {
-        PlayerPrefs.SetFloat("P1Health", P1HP);
-        PlayerPrefs.SetFloat("P2Health", P2HP);
+        PlayerPrefs.SetInt("P1Health", P1HP);
+        PlayerPrefs.SetInt("P2Health", P2HP);
    }
     
    
@@ -44,13 +44,13 @@ public class GameHandler : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 75){
-            P2HP -= 3.0f;
+            P2HP -= 3;
             Debug.Log("Player 2 HP : " + P2HP);
             SceneManager.LoadScene(4);
         }
         else {
-            Debug.Log("Missed");
             SceneManager.LoadScene(5);
+            Debug.Log("Missed");
         }
         if (P2HP <= 0){
             Debug.Log("Player 2 is Dead");
@@ -61,7 +61,7 @@ public class GameHandler : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 55){
-            P2HP -= 8.0f;
+            P2HP -= 8;
             Debug.Log("Player 2 HP: " + P2HP);
             SceneManager.LoadScene(6);
         }
@@ -79,7 +79,7 @@ public class GameHandler : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 65){
-            P2HP -= 6.0f;
+            P2HP -= 6;
             Debug.Log("Player 2 HP: " + P2HP);
             SceneManager.LoadScene(8);     
         }
@@ -97,7 +97,7 @@ public class GameHandler : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 45){
-            P2HP -= 12.0f;
+            P2HP -= 12;
             Debug.Log("Player 2 HP: " + P2HP);
             SceneManager.LoadScene(10);
         }
@@ -114,7 +114,7 @@ public class GameHandler : MonoBehaviour
      public void P1Special(){
         damageChance = Random.Range(0, 101);
         if (damageChance <= 90){
-            P2HP -= 25.0f;
+            P2HP -= 25;
             Debug.Log("Player 2 HP: " + P2HP);
             SceneManager.LoadScene(12);
         }
@@ -131,7 +131,7 @@ public class GameHandler : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 75){
-            P1HP -= 3.0f;
+            P1HP -= 3;
             Debug.Log("Player 1 HP: " + P1HP);
             SceneManager.LoadScene(14);
         }
@@ -149,7 +149,7 @@ public class GameHandler : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 55){
-            P1HP -= 8.0f;
+            P1HP -= 8;
             Debug.Log("Player 1 HP: " + P1HP);
             SceneManager.LoadScene(16);
         }
@@ -167,7 +167,7 @@ public class GameHandler : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 65){
-            P1HP -= 6.0f;
+            P1HP -= 6;
             Debug.Log("Player 1 HP: " + P1HP);
             SceneManager.LoadScene(18);}
         else {
@@ -183,7 +183,7 @@ public class GameHandler : MonoBehaviour
 
         damageChance = Random.Range(0, 101);
         if (damageChance <= 45){
-            P1HP -= 12.0f;
+            P1HP -= 12;
             Debug.Log("Player 1 HP: " + P1HP);
             SceneManager.LoadScene(20);
         }
@@ -201,7 +201,7 @@ public class GameHandler : MonoBehaviour
      public void P2Special(){
         damageChance = Random.Range(0, 101);
         if (damageChance <= 90){
-            P1HP -= 25.0f;
+            P1HP -= 25;
 
             Debug.Log("Player 1 HP: " + P1HP);
             SceneManager.LoadScene(22);

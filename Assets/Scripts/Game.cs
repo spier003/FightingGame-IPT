@@ -15,24 +15,24 @@ public class Game : MonoBehaviour
     }
     public void SetHP50(){
         
-        PlayerPrefs.SetFloat("P1Health", 50);
-        PlayerPrefs.SetFloat("P2Health", 50);
-        Debug.Log("Player 1 HP: " + PlayerPrefs.GetFloat("P1Health"));
-        Debug.Log("Player 2 HP: " + PlayerPrefs.GetFloat("P2Health"));  
+        PlayerPrefs.SetInt("P1Health", 50);
+        PlayerPrefs.SetInt("P2Health", 50);
+        Debug.Log("Player 1 HP: " + PlayerPrefs.GetInt("P1Health"));
+        Debug.Log("Player 2 HP: " + PlayerPrefs.GetInt("P2Health"));  
     }
     public void SetHP100(){
         
-        PlayerPrefs.SetFloat("P1Health", 100);
-        PlayerPrefs.SetFloat("P2Health", 100);
-        Debug.Log("Player 1 HP: " + PlayerPrefs.GetFloat("P1Health"));
-        Debug.Log("Player 2 HP: " + PlayerPrefs.GetFloat("P2Health"));
+        PlayerPrefs.SetInt("P1Health", 100);
+        PlayerPrefs.SetInt("P2Health", 100);
+        Debug.Log("Player 1 HP: " + PlayerPrefs.GetInt("P1Health"));
+        Debug.Log("Player 2 HP: " + PlayerPrefs.GetInt("P2Health"));
     }
     public void SetHP150(){
         
-        PlayerPrefs.SetFloat("P1Health", 150);
-        PlayerPrefs.SetFloat("P2Health", 150);
-        Debug.Log("Player 1 HP: " + PlayerPrefs.GetFloat("P1Health"));
-        Debug.Log("Player 2 HP: " + PlayerPrefs.GetFloat("P2Health"));
+        PlayerPrefs.SetInt("P1Health", 150);
+        PlayerPrefs.SetInt("P2Health", 150);
+        Debug.Log("Player 1 HP: " + PlayerPrefs.GetInt("P1Health"));
+        Debug.Log("Player 2 HP: " + PlayerPrefs.GetInt("P2Health"));
         
     }
 }
