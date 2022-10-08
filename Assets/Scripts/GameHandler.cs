@@ -12,14 +12,8 @@ public class GameHandler : MonoBehaviour
     public static int P2HP;
     //PLAYERS HP
 
-<<<<<<< Updated upstream:Assets/Scripts/GameHandler.cs
     // Players Accuracy
     public int damageChance;
-=======
-    // public TMP_InputField setHPPlayer;
-
-    public Image P1HPBar;
->>>>>>> Stashed changes:Assets/LoadName.cs
 
     public TextMeshProUGUI HPText1;
     public TextMeshProUGUI HPText2;
@@ -27,27 +21,8 @@ public class GameHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< Updated upstream:Assets/Scripts/GameHandler.cs
         P1HP = PlayerPrefs.GetInt("P1Health");
         P2HP = PlayerPrefs.GetInt("P2Health"); 
-=======
-         Player1Name.text = PlayerPrefs.GetString("P1Name");
-         Player2Name.text = PlayerPrefs.GetString("P2Name");
-        
-        P1HP = 50;
-        P2HP = 50;
-
-        // HPText1.text = PlayerPrefs.GetString("P1HP");
-        // HPText2.text = PlayerPrefs.GetString("P2HP");
-
-
-        
-    }
-
-    public void ResetPlayerName(){
-        PlayerPrefs.DeleteAll();
-        Debug.Log("Names are Deleted");
->>>>>>> Stashed changes:Assets/LoadName.cs
     }
 
     // Update is called once per frame
@@ -61,58 +36,7 @@ public class GameHandler : MonoBehaviour
         PlayerPrefs.SetInt("P1Health", P1HP);
         PlayerPrefs.SetInt("P2Health", P2HP);
    }
-    
    
-
-<<<<<<< Updated upstream:Assets/Scripts/GameHandler.cs
-    //Players Attack
-=======
-    //To restart
-    public void RestartGame() {
-            // SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
-            SceneManager.LoadScene(1);
-         }
-    public void SetHP50(){
-        
-        P1HP = 50;
-        P2HP = 50;
-        Debug.Log("Player 1 HP: " + P1HP);
-        Debug.Log("Player 2 HP: " + P2HP);
-        
-        // DontDestroyOnLoad(gameObject);
-    }
-
-    // public void saveHP(){
-    // PlayerPrefs.SetString("P1HP", setHPPlayer.text);
-    // PlayerPrefs.SetString("P1HP", setHPPlayer.text);
-    // }
-    public void SetHP100(){
-        
-        P1HP = 100;
-        P2HP = 100;
-        // PlayerPrefs.SetString("P1HP", );
-
-        Debug.Log("Player 1 HP: " + P1HP);
-        Debug.Log("Player 2 HP: " + P2HP);
-
-        // DontDestroyOnLoad(gameObject);
-    }
-    public void SetHP150(){
-        
-        P1HP = 150;
-        P2HP = 150;
-
-        Debug.Log("Player 1 HP: " + P1HP);
-        Debug.Log("Player 2 HP: " + P2HP);
-        
-        // DontDestroyOnLoad(gameObject);
-    }
-
-    //     public void saveButtonName(){
-
-    // }
-        //Players Attack
->>>>>>> Stashed changes:Assets/LoadName.cs
     public void P1LowPunch(){
 
         damageChance = Random.Range(0, 101);
