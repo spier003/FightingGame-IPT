@@ -8,9 +8,10 @@ using TMPro;
 
 public class GameHandler : MonoBehaviour
 {
+    
+    //PLAYERS HP
     public static int P1HP;
     public static int P2HP;
-    //PLAYERS HP
 
     // Players Accuracy
     public int damageChance;
@@ -20,7 +21,7 @@ public class GameHandler : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
         P1HP = PlayerPrefs.GetInt("P1Health");
         P2HP = PlayerPrefs.GetInt("P2Health"); 
     }
@@ -49,10 +50,10 @@ public class GameHandler : MonoBehaviour
             SceneManager.LoadScene(5);
             Debug.Log("Missed");
         }
-        if (P2HP <= 0){
+        /*if (P2HP <= 0){
             Debug.Log("Player 2 is Dead");
             SceneManager.LoadScene(24);   
-        }
+        }*/
     }
     public void P1HighPunch(){
 
@@ -66,10 +67,10 @@ public class GameHandler : MonoBehaviour
             Debug.Log("Missed");
             SceneManager.LoadScene(7);
         }
-         if (P2HP <= 0){
+        /* if (P2HP <= 0){
             Debug.Log("Player 2 is Dead");
             SceneManager.LoadScene(24);   
-        }
+        }*/
 
     }
     public void P1LowKick(){
@@ -84,10 +85,10 @@ public class GameHandler : MonoBehaviour
             Debug.Log("Missed");
             SceneManager.LoadScene(9);
         }
-         if (P2HP <= 0){
+        /* if (P2HP <= 0){
             Debug.Log("Player 2 is Dead");
             SceneManager.LoadScene(24);   
-        }
+        }*/
     }
 
     public void P1HighKick(){
@@ -102,10 +103,10 @@ public class GameHandler : MonoBehaviour
             Debug.Log("Missed");
             SceneManager.LoadScene(11);
         }
-         if (P2HP <= 0){
+        /* if (P2HP <= 0){
             Debug.Log("Player 2 is Dead");
             SceneManager.LoadScene(24);   
-        }
+        }*/
 
     }
      public void P1Special(){
@@ -119,10 +120,10 @@ public class GameHandler : MonoBehaviour
             Debug.Log("Missed");
             SceneManager.LoadScene(13);
         }
-         if (P2HP <= 0){
+        /* if (P2HP <= 0){
             Debug.Log("Player 2 is Dead");
             SceneManager.LoadScene(24);   
-        }
+        }*/
     }
     public void P2LowPunch(){
 
@@ -136,10 +137,10 @@ public class GameHandler : MonoBehaviour
             Debug.Log("Missed");
             SceneManager.LoadScene(15);
         }
-         if (P1HP <= 0){
+        /* if (P1HP <= 0){
             Debug.Log("Player 2 is Dead");
             SceneManager.LoadScene(25);   
-        }
+        }*/
 
     }
     public void P2HighPunch(){
@@ -154,10 +155,10 @@ public class GameHandler : MonoBehaviour
             Debug.Log("Missed");
             SceneManager.LoadScene(17);
         }
-         if (P1HP <= 0){
+        /* if (P1HP <= 0){
             Debug.Log("Player 2 is Dead");
             SceneManager.LoadScene(25);   
-        }
+        }*/
 
     }
     public void P2LowKick(){
@@ -171,10 +172,10 @@ public class GameHandler : MonoBehaviour
             Debug.Log("Missed");
             SceneManager.LoadScene(19);
         }
-         if (P1HP <= 0){
+        /* if (P1HP <= 0){
             Debug.Log("Player 2 is Dead");
             SceneManager.LoadScene(25);   
-        }
+        }*/
     }
     public void P2HighKick(){
 
@@ -188,10 +189,10 @@ public class GameHandler : MonoBehaviour
             Debug.Log("Missed");
             SceneManager.LoadScene(21);
         }
-        if (P1HP <= 0){
+       /* if (P1HP <= 0){
             Debug.Log("Player 2 is Dead");
             SceneManager.LoadScene(25);   
-        }
+        }*/
 
     }
     
@@ -207,9 +208,9 @@ public class GameHandler : MonoBehaviour
             Debug.Log("Missed");
             SceneManager.LoadScene(23);
         }
-         if (P1HP <= 0){
+       /*  if (P1HP <= 0){
             Debug.Log("Player 2 is Dead");
             SceneManager.LoadScene(25);   
-        }
+        }*/
      }
 }
