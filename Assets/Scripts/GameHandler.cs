@@ -13,6 +13,10 @@ public class GameHandler : MonoBehaviour
     public static int P1HP;
     public static int P2HP;
 
+    private int P1UsedSpecial;
+    private int P2UsedSpecial;
+    public Button P1S;
+    public Button P2S;
     // Players Accuracy
     public int damageChance;
 
@@ -23,7 +27,9 @@ public class GameHandler : MonoBehaviour
     void Start()
     {   
         P1HP = PlayerPrefs.GetInt("P1Health");
-        P2HP = PlayerPrefs.GetInt("P2Health"); 
+        P2HP = PlayerPrefs.GetInt("P2Health");
+        P1UsedSpecial = PlayerPrefs.GetInt("P1Use");
+        P2UsedSpecial = PlayerPrefs.GetInt("P2Use");
     }
 
     // Update is called once per frame
@@ -31,6 +37,20 @@ public class GameHandler : MonoBehaviour
     {
       HPText1.text = P1HP.ToString();
       HPText2.text = P2HP.ToString();
+
+      if(P1UsedSpecial >= 1){
+        P1S.interactable = false;
+      }
+        else{
+            P1S.interactable = true;
+        }
+
+    if(P2UsedSpecial >= 1){
+        P2S.interactable = false;
+      }
+        else{
+            P2S.interactable = true;
+        }
     }
    
    void OnDestroy() {
@@ -110,21 +130,12 @@ public class GameHandler : MonoBehaviour
 
     }
      public void P1Special(){
-        damageChance = Random.Range(0, 101);
-        if (damageChance <= 90){
+            PlayerPrefs.SetInt("P1Use", 1);
             P2HP -= 25;
             Debug.Log("Player 2 HP: " + P2HP);
-            SceneManager.LoadScene(12);
+            SceneManager.LoadScene(12); 
         }
-        else {
-            Debug.Log("Missed");
-            SceneManager.LoadScene(13);
-        }
-        /* if (P2HP <= 0){
-            Debug.Log("Player 2 is Dead");
-            SceneManager.LoadScene(24);   
-        }*/
-    }
+
     public void P2LowPunch(){
 
         damageChance = Random.Range(0, 101);
@@ -197,20 +208,10 @@ public class GameHandler : MonoBehaviour
     }
     
      public void P2Special(){
-        damageChance = Random.Range(0, 101);
-        if (damageChance <= 90){
+            PlayerPrefs.SetInt("P2Use", 1);
             P1HP -= 25;
-
             Debug.Log("Player 1 HP: " + P1HP);
             SceneManager.LoadScene(22);
-        }
-        else {
-            Debug.Log("Missed");
-            SceneManager.LoadScene(23);
-        }
-       /*  if (P1HP <= 0){
-            Debug.Log("Player 2 is Dead");
-            SceneManager.LoadScene(25);   
-        }*/
+
      }
 }
