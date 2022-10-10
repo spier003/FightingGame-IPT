@@ -34,7 +34,7 @@ public class Timer : MonoBehaviour
             else{
                 SceneManager.LoadScene(3);
             }
-
+            
         }
     }
 }
