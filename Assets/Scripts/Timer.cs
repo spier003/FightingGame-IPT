@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 2f;
+    float startingTime = 3f;
 
     int P1;
     int P2;
